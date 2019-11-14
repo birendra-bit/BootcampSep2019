@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../public/css/admin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+        <img src="../assets/cybergrouplogo.png" class="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Educational Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-success my-2 my-sm-0" style="color: white;" type="submit">Sign Up</button>
+            </form> -->
+        </div>
+    </nav>
+    <div id="targetPage"></div>
+    <div id="performance"></div>
+    <!-- <script id="index-template" type="text/html">
+        
+        <table style="width:50%;margin:10%">
+            <tr>
+                <th>Email</th>
+                <th>Name</th> 
+                <th>Date</th>
+            </tr>
+            {{ #data }}
+            <tr >
+                <td>{{ email }}</td>
+                <td>{{ name }}</td>
+                <td>{{ createdDate }}</td>
+               <td> <button class="btn btn-outline-danger my-2 my-sm-0 deleteButton" type="submit" id="{{ _id }}">Delete</button></td>
+               <td> <button class="btn btn-outline-success my-2 my-sm-0 updateButton" type="submit" id="{{ _id }}">Edit</button></td>
+               <td> <button class="btn btn-outline-success my-2 my-sm-0 viewButton" type="submit" id="{{ _id }}">View</button></td>
+            </tr>
+            {{ /data }}
+          
+        </table>
+        
+    </script> -->
+    <script id="index-template" type="text/html">
+    <table class="table table-hover table-dark" style="width:60%;margin-left:18%;margin-top:10%">
+        <thead>
+          <tr>
+            <th scope="col">Email</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        {{ #data }}
+        <tbody>
+               
+          <tr>
+           
+                <td>{{ email }}</td>
+                <td>{{ name }}</td>
+                <td>{{ createdDate }}</td>
+               <td> <button class="btn btn-outline-danger my-2 my-sm-0 deleteButton" type="submit" id="{{ _id }}">Delete</button></td>
+          </tr>
+          {{ /data }}
+        </tbody>
+      </table>
+    </script>
+
+
+    <script src="../public/js/adminShowExaminer.js"></script>
+</body>
+
+</html>

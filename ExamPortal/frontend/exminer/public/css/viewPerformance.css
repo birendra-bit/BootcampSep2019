@@ -1,0 +1,56 @@
+       li {
+           margin-left: 50px;
+           font-weight: 500;
+       }
+       
+       .logo {
+           height: 42px;
+       }
+       /* li:hover {
+
+           background-color: #c4e3f3;
+           border-radius: 6px;
+           transition-duration: 0.8s;
+           color: white;
+       } */
+       
+       .main {
+           margin-top: 7%;
+       }
+       
+       a:hover {
+           color: rgba(255, 255, 255, 0.8);
+           cursor: pointer;
+       }
+       
+       #span {
+           font-weight: 200;
+           color: rgba(255, 255, 255, 0.9);
+       }
+       
+       a:hover {
+           color: blue;
+       }
+       
+       .nav-link:hover {
+           color: blue;
+       }
+       /* .navbar-ligh .navbar-nav .nav-link {
+            color: white;
+        } */
+       
+       .performance-table {
+           border: 2px solid black;
+       }
+       
+       table {
+           margin-top: 50px;
+       }
+       
+       body {
+           background-color: #DAE0E6;
+       }
+       
+       h2 {
+           margin-top: 40px;
+       }

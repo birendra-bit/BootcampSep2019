@@ -1,0 +1,63 @@
+<!Doctype html>
+
+<head>
+    <title>Performance of Student</title>
+
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js"></script>
+        <link rel="stylesheet" href="../public/css/viewPerformance.css">
+    </head>
+
+    <body onload="showStudents()">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+            <img src="../../user/public/assets/cybergrouplogo.png" class="logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ">
+
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='examiner.html'">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='contactUs.html'">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="location.href='exam.html'">Test Collections</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="button" onclick="logout()">Logout</button>
+                </form>
+            </div>
+        </nav>
+        <div class="main">
+            <h2 class="container display-4">Performance of Students : </h2>
+            <table class="container table table-dark performance-table" id="tbdy">
+
+                <tr id="details">
+                    <td class="table-student-id" id="student-id">Student Id</td>
+                    <td class="table-student-name" id="student-name">Student Name</td>
+                    <td class="table-test-id" id="test-id">Test Id</td>
+                    <td class="table-attempted" id="attempted">Attempted</td>
+                    <td class="table-correct" id="correct">Correct</td>
+                    <td class="table-unattempted" id="unattempted">Unattempted</td>
+                    <td class="table-total-score" id="total-score">Total Score</td>
+                </tr>
+            </table>
+
+        </div>
+        <script src="../public/js/viewPerformance.js"></script>
+    </body>
+
+</head>
+
+</html>

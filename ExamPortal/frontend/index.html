@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./user/public/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body background="./user/public/assets/thumb-1920-486292.jpg">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+        <img src="./user/public/assets/cybergrouplogo.png" class="logo">
+        <!-- <a class="navbar-brand" href="#">Online Test Portal</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Educational Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-success my-2 my-sm-0" style="color: white;" >Sign Up</button>
+            </form> -->
+        </div>
+    </nav>
+    <div class="container" style="padding: 20px;">
+        <h1 class="data">Change the way <br>you Learn</h1>
+        <button id="signUp" class="btn btn-success my-2 my-sm-0" style="color: white;padding: 20px;" type="button" onclick="location.reload();location.href='./user/views/signUp.html'">Sign Up<a href="signUp.html"></a></button>
+        <button id="Login" class="btn btn-success my-2 my-sm-0" style="color: white;padding: 20px;" onclick="location.reload();location.href='./user/views/login.html'">Login</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+li {
+    font-weight: 500;
+    }
+    
+    li:hover {
+    background-color: black;
+    border-radius: 6px;
+    transition-duration: 0.8s;
+    color: white;
+    }
+    
+    a:hover {
+    color:rgba(255, 255, 255, 0.8);
+    }
+    .nav-link{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+    }
+
+ .modal-content {
+    background-color:white;
+    margin: 5% auto 15% auto; 
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    width: 80%; 
+    font-size: 20px;
+  } 
+  .logo{
+  height: 50px;
+      
+  }
+  .inputBox{
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid black;
+
+  }
+  .flex{
+    margin-top: 100px;
+    display: flex;
+    /* margin: auto; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    background-color: white;
+  }
+  body{
+    background-color: #ebebeb;
+  }
+  .inner-box{
+      padding: 20px;
+  }
+  .startTest{
+      float: right;
+  }
+  .instructions{
+      color: #555555;
+      font-size: 20px;
+  }
+
+  ul{
+      padding-left:4px;
+  }
