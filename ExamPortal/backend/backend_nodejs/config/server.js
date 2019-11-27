@@ -11,11 +11,11 @@ const app = express()
 app.use(bodyParser.urlencoded({
     extended: true
 }))
-app.use(express.static('../../frontend/exminer/excelFileUpload') )
+// app.use(express.static('../../frontend/exminer/excelFileUpload') )
 app.use(bodyParser.json())
 app.use(cors())
 app.options("*",cors())
-app.use('../../frontend/assets',express.static('public'))
+app.use(express.static(path.join(__dirname,'../upload')))
 
 app.use(router())
 app.listen(PORT,HOST, err=>{

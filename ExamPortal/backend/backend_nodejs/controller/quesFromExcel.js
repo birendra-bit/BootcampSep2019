@@ -18,13 +18,13 @@ const quesFromExcel = async (req, res) => {
         }
 
     })
-    console.log('exam code is '+req.body.examCode)
-          let i;  
+    let i;  
     try {
         
         for(i = 0;i<result.Sheet1.length;i++){
 
            result.Sheet1[i].examCode = req.body.examCode
+           result.Sheet1[i].questionImage = null;
 
         }
         

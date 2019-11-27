@@ -11,21 +11,18 @@ const reqPath = path.join(__dirname, '../../../assets');
 var storage = multer.memoryStorage()
 var storage = multer.diskStorage({
     destination: function (req, file, callback) {
-        if(file.originalname.includes(".xlsx"))
-            callback(null, 'upload/')
-        else
-            callback(null,reqPath)
+        callback(null, 'upload/')
+        // if(file.originalname.includes(".xlsx"))
+        //     callback(null, 'upload/')
+        // else
+        //     callback(null,reqPath)
     },
     filename: function (req, file, callback) {
         callback(null,Date.now()+'-'+file.originalname);
     }
 });
 
-
-// const upload = multer({storage:storage})
-const upload = multer({ limits: {fileSize: 1000000 },storage: storage })
-// var upload = multer({ dest: 'upload/'});
-
+const upload = multer({ limits: {fieldSize: 8 * 1024 * 1024 },storage: storage })
 
 const createToken = require("../auth/authenticator").checkAuth;
 
@@ -107,7 +104,7 @@ module.exports = () => {
 
     app.post('/exam/question', upload.single('questionImage'), (req, res) => {
         if (req.file) {
-            req.body['questionImage'] = '../public/assets/' + req.file.filename;
+            req.body['questionImage'] = '/backend/backend_nodejs/upload/' + req.file.filename;
         } else {
             req.body['questionImage'] = null
         }
@@ -132,7 +129,7 @@ module.exports = () => {
     app.patch('/exam/question/:id', upload.single('questionImage'), middleware, (req, res) => {
         //console.log('edit pic',req.file)
         if (req.file) {
-            req.body['questionImage'] = '../public/assets/' + req.file.filename
+            req.body['questionImage'] = '/backend/backend_nodejs/upload/' + req.file.filename
         } else {
             req.body['questionImage'] = null
         }
