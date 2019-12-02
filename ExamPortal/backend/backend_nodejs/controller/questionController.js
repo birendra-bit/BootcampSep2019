@@ -147,9 +147,13 @@ const getExamTime = async(req,res)=>{
 
 const questions = async(req, res) => {
     try {
-        let questionInformation = new questionDetail(req.body)
-        await questionInformation.save();
-        res.status(200).send({ msg: 'question saved successful' })
+        if( req.body.examCode != null ){
+            let questionInformation = new questionDetail(req.body)
+            await questionInformation.save();
+            res.status(200).send({ msg: 'question saved successful' })
+        }else{
+            res.status(200).send({msg:'invalid examCode'})
+        }
     } catch (error) {
         res.send({ error })
     }
@@ -181,6 +185,8 @@ const fetchQuestionById = async(req, res) => {
 
 const editQuestion = async(req, res) => {
     try {
+        console.log('update call ', req.body.answer)
+
         await questionDetail.findByIdAndUpdate({ _id: req.params.id },req.body)
         res.status(200).send({ msg: 'question updated' })
     } catch (error) {

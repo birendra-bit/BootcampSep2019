@@ -120,14 +120,11 @@ module.exports = () => {
 
     //get particular question using its ID
     app.get('/exam/question/:id', middleware, (req, res) => {
-        
-        console.log(req.params.id)
         Users.fetchQuestionById(req, res)
     })
 
     //examiner will edit questions
     app.patch('/exam/question/:id', upload.single('questionImage'), middleware, (req, res) => {
-        //console.log('edit pic',req.file)
         if (req.file) {
             req.body['questionImage'] = '/backend/backend_nodejs/upload/' + req.file.filename
         } else {
